@@ -1,22 +1,8 @@
 const router = require('express').Router()
+const places = require('../models/places.js')
 
-
-// GET /places
-app.get('/', (req, res) => {
-    let places = [{
-        name: 'H-Thai-ML',
-        city: 'Seattle',
-        state: 'WA',
-        cuisines: 'Thai, Pan-Asian',
-        pic: '/images/pad-thai.png'
-      }, {
-        name: 'Coding Cat Cafe',
-        city: 'Phoenix',
-        state: 'AZ',
-        cuisines: 'Coffee, Bakery',
-        pic: '/images/croissant.jpg'
-      }]
-      res.render('places/index', { places })
+router.get('/', (req, res) => {
+    res.render('places/index', { places })
 })
 
 router.post('/', (req, res) => {
