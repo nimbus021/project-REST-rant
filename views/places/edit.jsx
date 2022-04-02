@@ -1,5 +1,5 @@
 const React = require('react')
-const Def = require('../default.jsx')
+const Def = require('../default')
 
 function edit_form (data) {
     return (
@@ -26,6 +26,33 @@ function edit_form (data) {
                         name='pic'
                         />
                 </div>
+                <div className='row'>
+                    <div className='form-group col-sm-6'>
+                        <label htmlFor='city'>City</label>
+                        <input
+                        className='form-control'
+                        id='city'
+                        name='city'
+                        />
+                    </div>
+                    <div className='form-group col-sm-6'>
+                        <label htmlFor='state'>State</label>
+                        <input 
+                        className='form-control'
+                        id='state'
+                        name='state'
+                        />
+                    </div>
+                </div>
+                <div className='form-group col-sm-6'>
+                    <label htmlFor='cuisines'>Cuisines</label>
+                    <input
+                    className='form-control'
+                    id='cuisines'
+                    name='cuisines'
+                    />
+                </div>
+                <input className='btn btn-primary' type='submit' value='Submit Changes'/>
             </form>
           </main>
         </Def>
